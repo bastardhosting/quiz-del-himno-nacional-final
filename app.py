@@ -122,7 +122,6 @@ def construir_quiz():
         opciones = [correcta] + distractores[:3]
         random.shuffle(opciones)
         correct_idx = opciones.index(correcta)
-        opciones = [o[:120] + ('...' if len(o) > 120 else '') for o in opciones]
         quiz.append({
             'id': p['id'],
             'pregunta': p['pregunta'],
